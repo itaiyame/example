@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+body {font-family: Arial, Helvetica, sans-serif;
+    background: color #f1f1f1;
+}
+ 
+.wrap {
+    max-width: 1024px; 
+    margin: 0;
+}
+
+header {
+    padding: 80px;
+    background-color: #1b9;
+    text-align: center;
+    color: white;
+
+}
+header h1 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+nav {
+    background-color: #ffffff; overflow: hidden;
+    
+}   
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block; 
+    padding: 14px 20px;
+}
+nav a.right {
+    float: right;
+}
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+main {
+    position: relative;
+    /*width: 100%;*/
+}
+
+
+aside {
+    border: 1px solid red;
+    width: 30%;
+    padding: 20px;
+    background: color #f1f1f1;
+    position: absolute;
+}
+
+article {
+    border: 1px solid green;
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    left: 30%;
+}
+footer {
+    border: 1px solid blue;
+    clear: both;
+    padding: 20px;
+    background-color: lightslategray;
+    text-align: center;
+}
+
+.section{
+    margin:10px 0px 36px;
+}
+
+.image {
+    
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    border:1px solid #aaa;
+    border-width: 1 2px 2px;
+}
+.image img{width:100%}
+.image2 {
+    
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    border:1px solid #aaa;
+    border-width: 1 2px 2px;
+}
+.image2 img{width:30%}
+
+@media screen and (max-width: 768px){
+    aside {width: 100%;}
+    article {width: 100%;}
+}
+@media screen and (max-width: 480px) {
+    nav a {float: none;}
+    nav a.right {float:none;}
+}

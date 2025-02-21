@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+        let sw = true;
+        let i = 0;
+        while(sw) {
+            console.log(++i)
+            sw =confirm("계속할까요?");
+            if (i==5)break;
+        }
+        console.log("끝")
+    </script>
+    
+</body>
+</html>

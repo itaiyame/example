@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색 매소드</title>
+    <style>
+        body * {
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 15px;
+            margin: 15px;
+        }
+        .btn * {
+            display: inline-block;
+            border-color: black;
+            color: black;
+            font-size: 24px;
+        }
+        script {
+            display: none;
+        }
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    고조
+    <div>증조부
+        <ul>조부
+            <li>부1
+                <span>본인1</span>
+            </li>
+        
+        </ul>
+    </div>
+    <div>조부2
+        <p>부2
+            <span>본인2</span>
+        </p>
+    </div>
+
+    <div class="btn">
+        <button id="btnparent">span의 부모</button>
+        <button id="btnparentP">span의 부모중 p를 선택</button>
+        <button id="btnsallparents">모든 상위위</button>
+        <button id="btnparentsdiv">모든 상위중 div</button>
+        <button id="btnparentsuntil">상위중 ~까지</button>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnparent").click(function(){
+                $("span").parent().css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnparentP").click(function(){
+                $("span").parent("p").css({
+                    "color": "green",
+                    "border-color": "green"
+                });
+            });
+            $("#btnsallparents").click(function(){
+                $("span").parents().css({
+                    "color": "blue",
+                    "border-color": "blue"
+                });
+            });
+
+             $("#btnparentsdiv").click(function(){
+                $("span").parents("div").css({
+                    "color": "blue",
+                    "border-color": "blue"
+                });
+            });
+            $("#btnparentsuntil").click(function(){
+                $("span").parentsUntil("div").css({
+                    "color": "brown",
+                    "border-color": "brown"
+                });
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

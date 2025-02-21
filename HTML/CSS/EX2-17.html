@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 우선순위</title>
+    <style>
+        p {color: pink;}
+       
+        .b {color: blue !importan;}
+        /p.b.c {color: aliceblue;}/
+        p::first-child {color: rgb(33, 23, 11) !important;}
+    </style>
+</head>
+<body>
+    <p id="a" class="b c">한국은 비타민 D가 부족한 사람이 많다</p>
+    <p>비타민D는 햋빛을 받으면 된다다</p>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영문 긴문자 가로맞춤춤</title>
+    <style>
+        ul{
+            width: 200px;
+            border: 1px solid black;
+        }
+        .a1 li {word-wrap: break-word;}
+        p{
+            width: 180px;
+            text-align: center;
+            border: 1px solid red;
+        }
+        .b1 {word-break: normal;}
+        .b2 {word-break: break-all;}
+        .b3 {word-break: keep-all;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>이름 : 홍길동</p>
+        </li>
+        <li>
+            <p>이메일 : itaiyamessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss123123123131s@naver.com</p>
+        </li>
+    </ul>
+    <ul class="a1">
+        <li>
+            <p>이름 : 홍길동</p>
+        </li>
+        <li>
+            <p>이메일 : itaiyamessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss123123123131s@naver.com</p>
+        </li>
+    </ul>
+    <p class="b1">
+        홍길동<br>
+        한국사회학사연구회 고고학자 선임교수<br>
+        itaiyamessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss123123123131s@naver.com
+    </p>
+    <p class="b2">
+        홍길동<br>
+        한국사회학사연구회 고고학자 선임교수<br>
+        itaiyamessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss123123123131s@naver.com
+    </p>
+    <p class="b3">
+        홍길동<br>
+        한국사회학사연구회 고고학자 선임교수<br>
+        itaiyamessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss123123123131s@naver.com
+    </p>
+    
+</body>
+</html>

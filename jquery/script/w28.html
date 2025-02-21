@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필터 선택 매소드드</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            }
+        td {
+            border: 1px solid black;
+            text-align: center;
+            }    
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>11</td><td>12</td><td>13</td>
+        </tr>
+        <tr class="nmm">
+            <td>21</td><td>22</td><td>23</td>
+        </tr><tr class="nm">
+            <td>31</td><td>32</td><td>33</td>
+        </tr ><tr class="nmm">
+            <td>41</td><td>42</td><td>43</td>
+        </tr><tr>
+            <td>51</td><td>52</td><td>53</td>
+        </tr>
+    </table>
+
+    <div>
+        <button id="btnFirst">첫번째 줄</button>
+        <button id="btnLast">마지막 줄</button>
+        <button id="btnEq">3번쨰쨰 줄</button>
+        <button id="btnFilter">2번쨰4번쨰 줄</button>
+        <button id="btnnot">3번째 뺴고 나머지 다다</button>
+    </div>
+    
+
+    <script>
+        $(document).ready(function(){
+            $("#btnFirst").click(function(){
+                $("table tr").first().css("background-color", "red");
+            });
+            $("#btnLast").click(function(){
+                $("table tr").last().css("background-color", "red");
+            });
+            $("#btnEq").click(function(){
+                $("table tr").eq(2).css("background-color", "red");
+            });
+            $("#btnFilter").click(function(){
+                $("table tr").filter(".nmm").css("background-color", "red");
+            });
+            $("#btnnot").click(function(){
+                $("table tr").not(".nm").css("background-color", "red");
+            });
+        });
+    </script>
+    
+</body>
+</html>

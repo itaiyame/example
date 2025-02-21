@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .slideCont{
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+        }
+        .numText{
+            position: absolute;
+            top: 0;
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+        }
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .previous, 
+        .next{
+            position: absolute;
+            top: 50%;
+            color: white;
+            padding: 16px;
+            margin-top: -48px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: 0.6s;
+        }
+        .next{
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+        .previous:hover,
+        .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .dotCont{
+            text-align: center;
+            margin-top: -5px;
+        }
+        .dot:hover,
+        .active{
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!--슬라이더 사진진-->
+    <div class="slideCont">
+        <div class="slide"  style="display: block;">
+            <div class="numText">1/4</div>
+            <img src="./source/img_lights_wide.jpg" alt="자연">
+            <div class="text">자연연</div>
+        </div>
+        <div class="slide">
+            <div class="numText">2/4</div>
+            <img src="./source/img_mountains_wide.jpg" alt="설경">
+            <div class="text">설경경</div>
+        </div>
+        <div class="slide">
+            <div class="numText">3/4</div>
+            <img src="./source/img_nature_wide.jpg" alt="오로라라">
+            <div class="text">오로라라</div>
+        </div>
+        <div class="slide">
+            <div class="numText">4/4</div>
+            <img src="./source/img_snow_wide.jpg" alt="계곡">
+            <div class="text"v>계곡곡</div>
+        </div>
+        <!--이전과 다음버튼-->
+        <a class="previous" onclick="plusIndex"><</a>
+        <a class="next" onclick="plusIndex">></a>
+    </div>
+    
+    <br>
+
+    <div class="dotCont">
+        <!--슬라이더 점점-->
+        <span class="dot" onclick="showSlides(0)"></span>
+        <span class="dot" onclick="showSlides(1)"></span>
+        <span class="dot" onclick="showSlides(2)"></span>
+        <span class="dot" onclick="showSlides(3)"></span>
+    </div>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusIndex(value) {
+            slideIndex += value;
+        }
+
+        function showSlides(i) {
+            let slide = document.getElementsByClassName("slide");
+            let dot = document.getElementsByClassName("dot");
+
+            
+            for(let i=0; i<slide.length; i++){
+                slide[i].style.display = "none";
+            }
+            slide[i].style.display = "block";
+            dot[i].classname += " active";
+
+
+        }
+    </script>
+</body>
+</html>

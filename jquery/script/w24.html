@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스의 사용용</title>
+    <style>
+        .red {color: red;}
+        .green {color:green;}
+        .blue {color: blue;}
+
+        .size16 {font-size: 16px;}
+        .size32 {font-size: 32px;}
+        .size24 {font-size: 24px;}
+
+        .underline{text-decoration: underline;}
+        
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    
+    <h2 class="red">클래스의 사용용</h2>
+    <div>
+        <p class="green">제안된 헌법개정안은 대통령이 20일 이상의 공고하여야 한다.</p>
+        <p class="blue">대한민국은 통일을 지향하며,  정책을 수립하고 이를 추진한다.</p>
+    </div>
+    <h2 class="underline">제목2</h2>
+    <div>
+        <p class="red">제안된 헌법개정안은 대통령이 20일 이상의 공고하여야 한다.</p>
+        <p class="blue">대한민국은 통일을 지향하며,  정책을 수립하고 이를 추진한다.</p>
+    </div>
+
+    <div>
+        <button id="BtnUnderLine">밑줄 긋기</button>
+        <button id="BtnRemoveLine">밑줄제거거</button>
+        <button id="BtnToggleLine">긋거나 말거나나</button>
+        <button id="BtnchangeSize">긋거나 말거나나</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#BtnUnderLine").click(function(){
+                $("h2").addClass("underline");
+            });
+            $("#BtnRemoveLine").click(function(){
+                $("h2").removeClass("underline");
+            });
+            $("#BtnToggleLine").click(function(){
+                $("h2").toggleClass("underline");
+            });
+            $("#BtnChangeSize").click(function(){
+                $("p").addClass(function(index, classname){
+                    console.log(index + 1);
+                    return "size";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

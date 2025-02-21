@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 스프라이트트</title>
+    <style>
+        li {list-style-type: none; margin: 10px; }
+        .lnb li a{ 
+            display: block; text-decoration: none; font: 25px Times; 
+            background: url(./image/img_navsprites.gif) no-repeat;
+            background-size: 134px 44px;
+            padding: 10px;
+            width: 0;
+            
+            
+        }
+        .lnb li:nth-child(1) a {background-position: 0 0; padding-left: 35px;}
+        .lnb li:nth-child(2) a {background-position: -47px 0; padding-left: 33px;}
+        .lnb li:nth-child(3) a {background-position: -90px 0; padding-left: 33px;}
+    </style>
+</head>
+<body>
+    <ul class="lnb">
+        <li><a href="#">&nbsp;&nbsp;home</a></li>
+        <li><a href="#">&nbsp;&nbsp;preserve</a></li>
+        <li><a href="#">&nbsp;&nbsp;animal</a></li>
+      
+    </ul>
+</body>
+</html>

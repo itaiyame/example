@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">내용용</div>
+    <button type="button" id="btnchange">변경</button>
+
+    <script>
+        let btnchange = document.getElementById("btnchange");
+        btnchange.onclick = function() {
+            let content = document.getElementById("content");
+            content.style.width = "200px";
+            content.style.height = "200px";
+            content.style.border = "4px solid #718c00";
+            content.style.textAlign = "center";
+            content.style.lineheight = "200px";
+
+        };
+    </script>
+    
+</body>
+</html>

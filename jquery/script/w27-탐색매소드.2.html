@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색 매소드</title>
+    <style>
+        body * {
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 15px;
+            margin: 15px;
+        }
+        .btn * {
+            display: inline-block;
+            border-color: black;
+            color: black;
+            font-size: 24px;
+        }
+        script {
+            display: none;
+        }
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    고조
+    <div>증조부
+        <ul>조부
+            <li>큰아빠</li>
+            <li>아빠<span>본인1</span></li>
+            <li>작은아빠</li>
+        </ul>
+    </div>
+    <div>조부2
+        <p>부2
+            <span>본인2</span>
+        </p>
+    </div>
+
+    <div class="btn">
+        <button id="btnchildren">직계하위선택</button>
+        <button id="btnunder">아래있는 애들중중</button>
+        <button id="btnunderall">아래있는 모두두</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnchildren").click(function(){
+                $("ul").children().css({
+                    "color": "#f00",
+                    "border-color": "#f00"
+                });
+            });
+            $("#btnunder").click(function(){
+                $("div").find("span").css({
+                    "color": "black",
+                    "border-color": "black"
+                });
+            });
+            $("#btnunderall").click(function(){
+                $("div").find("*").css({
+                    "color": "black",
+                    "border-color": "black"
+                });
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

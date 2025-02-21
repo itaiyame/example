@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문단관련 공백처리</title>
+    <style>
+        p{
+            width: 400px;
+            border: 1px solid black;
+        }
+        .a1 {white-space: normal;}
+        .a2 {white-space: nowrap;}
+        .a3 {white-space: pre;}
+        .a4 {white-space: pre-wrap;}
+        .a5 {white-space: pre-line;}
+        .장문생략 {
+            width: 150px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p class="a1">언니는 푸르른 산보다 민둥산을 좋아한다.이마가 넓어서 그런건지는 몰라도 아무튼 산꼭대기는 비어있어야한다</p>
+    <p class="a2">언니는 푸르른 산보다 민둥산을 좋아한다.이마가 넓어서 그런건지는 몰라도 아무튼 산꼭대기는 비어있어야한다</p>
+    <p class="a3">언니는 푸르른 산보다 민둥산을 좋아한다.이마가 넓어서 그런건지는 몰라도 아무튼 산꼭대기는 비어있어야한다</p>
+    <p class="a4">언니는 푸르른 산보다 민둥산을 좋아한다.이마가 넓어서 그런건지는 몰라도 아무튼 산꼭대기는 비어있어야한다</p>
+    <p class="a5">언니는 푸르른 산보다 민둥산을 좋아한다.이마가 넓어서 그런건지는 몰라도 아무튼 산꼭대기는 비어있어야한다</p>
+    <p class="장문생략"><a href="#"> 푸르른 산보다 민둥산을 좋아한다.이마가 넓어서 그런건지는 몰라도 아무튼 산꼭대기는 비어있어야한다</a></p>
+</body>
+</html>

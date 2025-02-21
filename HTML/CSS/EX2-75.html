@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오르세미술관</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {list-style-type: none;}
+        
+    
+        a {
+            line-height: 1.5; color: #333;
+        }
+        body {
+            background: #f1f1f1; 
+            font: 13px;
+        }
+        header {
+            background: coral;
+        }
+        h1 {
+            font: 25px;
+            padding: 10px;
+            color: #fff;
+        }
+        .lnb li {
+            margin: 10px;
+            padding: 10px;
+            background: lightgreen;
+        }
+        .content {
+            padding: 20px;
+        }
+        h2 {font: 20px;}
+        .ext {
+            margin: 10px;
+            padding: 20px;
+            background: lightgreen;
+        }
+        footer {padding: 10px; background: #aaa;}
+        
+        @media all and (min-width: 768px) and (max-width:1024px) {
+            #container {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: auto auto;
+            }
+            .aside {
+                grid-column: 1/3;
+            }
+        }
+
+
+        @media all and (min-width: 1025px) {
+            #container {
+                display: grid;
+                grid-template-columns: 20% 50% 30%;
+                
+            }
+            
+            }
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Musee d'Orsay</h1>
+        </header>
+        <div id="container" class="clear">
+            <div class="lnb">
+                <ul>
+                    <li><a href="#">작가의 작품</a></li>
+                    <li><a href="#">작가의 시대</a></li>
+                    <li><a href="#">작가의 일생생</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h2>pictures</h2>
+                <p>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">오페라좌의 관현악단단</a><br>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">오페라좌의 관현악단단</a><br>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">오페라좌의 관현악단단</a><br>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">오페라좌의 관현악단단</a><br>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">오페라좌의 관현악단단</a><br>
+                </p>
+            </div>
+
+            <div class="aside">
+                <ul class="ext">
+                    <li><h2>Workshop Go</h2><a href="#">Life drawing workshop</a></li>
+                    <li><h2>Workshop Go</h2><a href="#">Life drawing workshop</a></li>
+                    <li><h2>Workshop Go</h2><a href="#">Life drawing workshop</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div>
+            <p>&copy;2018lex amis all rights reserved</p>
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수수</title>
+</head>
+<body>  
+    <table>
+        <tr>
+            <th>이름름</th>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <th>html</th>
+            <td><input type="number" id="html"></td>
+        </tr>
+        <tr>
+            <th>css</th>
+            <td><input type="number" id="css"></td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
+            <td><input type="number" id="java"></td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="readdata()"> 결과</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="comment">sss</td>
+        </tr>
+    </table>
+    <script>
+        function readdata() {
+            let name = document.getElementById("name").value;
+            let html = document.getElementById("html").value;
+            let css = document.getElementById("css").value;
+            let java = document.getElementById("java").value;
+
+            let comment = exampass(name, html, css, java);
+            
+            document.getElementById("comment").innerHTML = comment;
+        }
+        function exampass (name, h, c, j){
+            let comment = name + '학생은';
+            if (h >= 60 && c >= 60 && j >= 60){
+                comment += '전과목 PASS';
+            }
+            else{
+                if (h < 60){
+                    comment += 'html 재시험';
+                }
+                if (c < 60){
+                    comment += 'css재시험';
+                }
+                if (j < 60){
+                    comment += 'java script재시험';
+                }
+            }
+            return comment;
+        }
+        let evaluation = (function(msg){
+            console.log(msg);
+        })("참 잘했어요요");
+    </script>
+    
+</body>
+</html>

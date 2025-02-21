@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인과 블록요소 속성 변경</title>
+    <style>
+        li {list-style-type: none;}
+        .a1 li {display: inline;}
+        .a1 li a {
+            display: inline-block;
+            background: rebeccapurple;
+            color: white;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            text-decoration: none;
+            }
+        .a1 li a:hover {
+            text-decoration: underline;
+            background-color: aquamarine;
+            }
+            .b1 {
+                height: 50px;
+                border: 2px solid blue;
+                vertical-align: middle;
+                overflow-y: scroll;
+            }
+            .b2 {
+                height: 50px;
+                border: 2px solid blue;
+                vertical-align: middle;
+                overflow: hidden;
+            }
+            .b3 {
+                height: 80px;
+                border: 2px solid blue;
+                vertical-align: middle;
+                overflow:auto;
+            }
+            .b4 {
+                height: 50px;
+                border: 2px solid blue;
+                vertical-align: middle;
+                overflow: visible;
+            }
+            #c1 {visibility: hidden;}
+            #d1 {display: none;}
+
+    </style>
+</head>
+<body>
+    <ul class="a1">
+        <li><a href="#">company</a></li>
+        <li><a href="#">product</a></li>
+        <li><a id="c1" href="#">service</a>컨텐츠</li>
+        <li><a id="d1" href="#">community</a>빵</li>
+
+    </ul>
+    <p class="b1">광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다. 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.</p>
+    <p class="b2">광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다. 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.</p>
+    <p class="b3">광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다. 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.</p>
+    <p class="b4">광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다. 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.</p>
+
+    
+</body>
+</html>

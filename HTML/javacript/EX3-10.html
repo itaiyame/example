@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if</title>
+</head>
+<body>
+    <label>
+        나이:
+        <input type="number" id="age">
+    </label><br>
+    <button type="button" onclick="calfee()"> 입장료계산</button><br>
+    <label id="admissionFee"></label>
+    <script>
+        function calfee(){
+        let age= document.getElementById("age").value;
+        let admissionFee='';
+        if (age<13){
+            admissionFee='2000원';
+        }
+        else {admissionFee='4000원'};
+        
+        }
+        
+        document.getElementById("admissionFee").innerHTML=admissionFee
+    </script>
+</body>
+</html>

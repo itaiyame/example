@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq 요소 선택자자</title>
+    <script src="./jquery-3.7.1.min.js">
+
+    </script>
+</head>
+<body>
+    <h1>이것은 제목입니다.</h1>
+
+    <p>이것은 문단입니다.</p>
+    <p>이것은 다른문단입니다.</p>
+    <button>클릭하면 다른문단 을숨김빈다</button>
+    <script>
+        let button = document.getElementsByTagName("button");
+        button[0].onclick = function(){
+            let p = document.getElementsByTagName("p");
+            for(let i=0; i<p.length; i++){
+                p[i].style.display = "none";
+            }
+        };
+
+        
+    </script>
+    
+</body>
+</html>

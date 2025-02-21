@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼폼</title>
+</head>
+<body>
+    <h1 title="이것은 제목입니다">Label 요소</h1>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th scope="row"><label for="id">아이디</label></th>
+                <td><input type="text" id="id" title="아이디 입력"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="pw">password</label></th>
+                <td><input type="password" id="pw" title="비밀번호 입력"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="r_pw">re password</label></th>
+                <td><input type="repass" id="rpw" title="비밀번호 재입력"></td>
+            </tr>     
+            <tr>
+                <th scope="row"><label for="email">email</label></th>
+                <td></td>
+            </tr>     
+            <tr>
+                <th scope="row"><label for="hp">hp</label></th>
+                <td>
+                    <select id="hp" title="핸드폰앞자리 선택">
+                        <option>선택</option>
+                        <option selected>010</option>
+                        <option>011</option>
+                    </select>
+                    <input type="text" title="휴대폰 번호 중간 4자리 입력">
+                    <input type="text" title="휴대폰 번호 뒷자리 4자리 입력">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="회원가입"><input type="reset" value="취소">
+    </form>
+    
+</body>
+</html>

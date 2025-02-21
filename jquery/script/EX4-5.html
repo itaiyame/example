@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fist, last 선택자자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <ol id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <div>
+        <button id="bt1">1삭제</button>
+        <button id="bt2">2삭제</button>
+    </div>
+
+    <script>
+        $(function(){
+            $("#bt1").click(function(){
+                $("#list > li:first").hide();
+            });
+            $("#bt2").click(function(){
+                $("#list > li:first").hide();
+            });
+        });
+    </script>
+</body>
+</html>

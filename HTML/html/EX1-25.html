@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼2</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <p>아이디 : <input type="text" maxlength="2" > </p>
+        <p>비밀번호 : <input type="password"> </p>
+        <p>검색 : <input type="search"> </p>
+        <p>이메일 : <input type="email"> </p>
+        <p>전화번호 : <input type="tel"> </p>
+        
+        <p>색상 : <input type="color" name="color"></p>
+        <p>숫자 : <input type="number" name="number" min="-5" max="9999"></p>
+        <p>
+            만족도 : <input type="range" oninput="document.getElementById('val1').innerHTML = this.value;">
+            <span id="val1"></span>
+        </p>
+        <p>
+            <label> <input type="radio" name="recive" value="네" checked> 예 </label>
+            <label> <input type="radio" name="recive" value="아니요"> 아니 </label>
+        </p>
+        <p>
+            <label><input type="checkbox" name="subject" value="html" checked>html</label>
+            <label><input type="checkbox" name="subject" value="css">css</label>
+            <label><input type="checkbox" name="subject" value="java">jave</label>
+        </p>
+
+        <p><input type="submit"></p>
+        <p><input type="reset"></p>
+        <p><input type="button" value="ok" onclick="alert('확인버튼 클릭 했어요')""></p>
+        <p><input type="image" src="./image/ok.png" alt="ok버튼"></p>
+        <p>첨부파일<input type="file"></p>
+        <p><input type="hidden" name="hide" value="hidden contents"</p>
+    </form>
+    
+</body>
+</html>

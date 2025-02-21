@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop 효과과</title>
+
+    <style>
+        div {
+            background-color: rgb(173, 173, 173);
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+        div#panel {
+            padding: 50px;
+            display: none;
+        }
+        div#flip {
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown(5000);
+            });
+
+            $("#stop").click(function(){
+                $("#panel").stop();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="stop">슬라이딩 정지</button>
+    <div id="flip">클릭하면 슬라이드 다운</div>
+    <div id="panel">hello world</div>
+    
+</body>
+</html>

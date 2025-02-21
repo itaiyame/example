@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if</title>
+</head>
+<body>
+    <p>
+        <label>html:<input type="number" id="html"></label>
+    </p>
+    <p>
+        <label>css:<input type="number" id="css"></label>
+    </p>
+    <p>
+        <label>Javascript:<input type="number" id="java"></label>
+    </p>
+    <p>
+        <button type="button" onclick="showComment()">결과</button>
+    </p>
+    <p>
+        <label id="comment"></label>
+    </p>
+    <script>
+        function showComment () {
+            let html=document.getElementById("html").value;
+            let css=document.getElementById("css").value;
+            let java=document.getElementById("java").value;
+            let comment = "";
+
+            html = parseInt(html);
+            css = parseInt(css);
+            java = parseInt(java);
+
+            let average = (html + css + java) / 3;
+            if (average >= 60 ){
+                if (html < 40) {comment = "html 40점 미만 불합격";}
+                else if (css < 40) { comment = "css 40점 미만 불합격";}
+                else if (java < 40) { comment = "java 40점 미만 불합격";}
+                else {comment = "평균" + average + "점 합격";}
+            } else {
+                comment = "평균" + average + "점 불합격";
+            }
+
+            document.getElementById("comment").innerHTML= comment;
+        } 
+    </script>
+</body>
+</html>

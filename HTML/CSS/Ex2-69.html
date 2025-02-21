@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float3</title>
+
+    <style type="text/css">
+        .clear::after{
+            content: "";/*empty text 추가*/
+            display: block;
+            clear: both;
+        }
+        .mydrink {
+            padding: 30px;
+            background: #eee;
+            border: 5px solid #bbb;
+        }
+        .mydrink::after {
+            content: "";/*empty text 추가*/
+            display: block;
+            clear: both;
+        }
+        h1 {
+            margin: 0 0 10px;
+            text-align: center;
+        }
+        p {
+            box-sizing: border-box;
+            padding: 15px 25px; 
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .greentea {
+            float: left;
+            width: 47%;
+            border: 3px solid green;
+        }
+        .coffee { 
+            float: left;
+            width: 47%;
+            border: 3px solid #a50;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydrink clear">
+        <h1> 녹차와커파</h1>
+        <p class="greentea">국교는 인정되지 아니하며, 종교와 정치는 분리된다. 국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다.</p>
+
+        <p class="coffee">국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</p>
+    </div>
+    
+</body>
+</html>

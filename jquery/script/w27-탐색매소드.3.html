@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제탐색매소드</title>
+
+    <style>
+         .testsiblings,
+         .testsiblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+         }
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="testsiblings">div(부모)
+        <p class="first">p</p>
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+        <p>p</p>
+        <p class="last">p</p>
+    </div>
+    <div>
+        <button id="btnsiblings">h2의 형제</button>
+        <button id="btnsiblingsP">h2의 형제</button>
+        <button id="btnnext">h2의 다음놈놈</button>
+        <button id="btnnextAll">h2의 다음놈들들</button>
+        <button id="btnnextUntil">h2의 모든 동생들중 막내 이전까지지</button>
+        <button id="btnPrev">h2의 바로 전전</button>
+        <button id="btnPrevAll">h2의 위에 모든놈놈</button>
+        <button id="btnPrevUntil">h2의 위 큰놈 전까지지</button>
+    </div>
+    
+
+    <script>
+        $(function(){
+            $("#btnsiblings").click(function(){
+                $("h2").siblings().css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnsiblingsP").click(function(){
+                $("h2").siblings("p").css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnnext").click(function(){
+                $("h2").next().css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnnextAll").click(function(){
+                $("h2").nextAll().css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnnextUntil").click(function(){
+                $("h2").nextUntil("p.last").css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnPrev").click(function(){
+                $("h2").prev().css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnPrevAll").click(function(){
+                $("h2").prevAll().css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+            $("#btnPrevUntil").click(function(){
+                $("h2").prevUntil("p.first").css({
+                    "color": "red",
+                    "border-color": "red"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

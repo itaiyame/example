@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop()</title>
+    <style>
+        div#anibox{
+            width: 100px;
+            height: 100px;
+            background-color: #9b2;
+        }
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>
+        <button id="btnstart">애니메이션 시작</button>
+        <button id="btnstop">애니메이션 정지</button>
+    </p>
+    <div id="anibox"></div>
+
+    <script>
+        $(function(){
+            $("#btnstart").click(function(){
+                $("#anibox").animate({height: "300px"}, 3000);
+                $("#anibox").animate({width: "300px"}, 3000);
+                $("#anibox").animate({height: "100px"}, 3000);
+                $("#anibox").animate({width: "100px"}, 3000);
+            });
+            $("#btnstop").click(function(){
+                $("#anibox").stop();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on 매소드</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>
+        나를 클릭하면 나는 사라진다
+    </p>
+    <p>클릭하면 나도 사라집니다</p>
+    <p>나도 사라진다</p>
+
+    <script>
+        $(function(){
+            $("p").on("click", function(){
+                $(this).hide();
+            });
+        });
+    </script>
+    
+</body>
+</html>

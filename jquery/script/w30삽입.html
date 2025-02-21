@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삽입매서드</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>  
+    <div id="m2"><strong>내용ㅇ2</strong></div>
+
+    <script>
+        $(document).ready(function(){
+            $("<p>삽입2_1</p>").prependTo("#m2");
+            $("<p>삽입2_2</p>").appendTo("#m2");
+            $("<p>삽입2_3</p>").insertBefore("#m2");
+            $("<p>삽입2_4</p>").insertAfter("#m2");
+        });
+    </script>
+</body>
+</html>

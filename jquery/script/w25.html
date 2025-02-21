@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css()</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>이것은 제목</h2>
+
+    <p style="background-color: red;">이것은 문단단</p>
+    <p style="background-color: green;">이것은 문단단</p>
+    <p style="background-color: blue;">이것은 문단단</p>
+    
+    <button id="checkColor">첫번쨰 요소의 배경색 확인</button>
+    <button id="checkColorAll">여러 요소의 배경색 확인인</button>
+    <button id="changeColorAll">모든색상 변경경</button>
+    <button id="setProps">여러 속성 설정정</button>
+    <script>    
+        $(document).ready(function(){
+            $("#checkColor").click(function(){
+                let color = $("p").css("background-color");
+                //alert(`배경색: $(color)`);
+                console.log(`배경색: $(color)`);
+            });
+            $("#checkColorAll").click(function(){
+                $("p").css("background-color", function(index, value){
+                    console.log(`$(index + 1)번째요소의 배경색:$(value)`);
+                });
+            });
+            $("#changeColorAll").click(function(){
+                $("p").css("background-color", "yellow");
+            });
+            $("#setProps").click(function(){
+                $("p").css({
+                    "color": "white",
+                    "background-color": "blue",
+                    "font-weight": "bold",
+                    "padding": "20px"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

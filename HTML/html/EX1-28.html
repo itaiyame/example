@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 입력 속성성</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>필드에 입력형식 힌트 추가</legend>
+            <p><label for="id">아이디</label><input type="text" id="id" placeholder="아이디" title="아이디 입력" name="id" required></p>
+            <p><label for="pw">비밀번호</label><input type="password" id="pw" placeholder="비밀번호" title="비밀번호 입력" name="pw" required></p>
+            <p><button>전송송</button></p>
+        </fieldset>
+    </form>
+    <form action="test.jsp" method="get">
+        <fieldset>
+            <legend>자동완성기능</legend>
+            <p>
+                <label for="phone">전화번호</label>
+                <input type="tel" id="phone" name="phone" title="형식 : 000-000(0)-0000"
+                autocomplete="off" pattern="\d{3}-\d{3,4}-\d{4}">
+            </p>
+            <p>
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" title="이메일 입력" autocomplete="on">
+            </p>
+            <p><button>전송</button></p>
+        </fieldset>
+    </form>
+    <form action="test.jsp" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>다중 파일 선택</legend>
+            <p>
+                <label>이메일<input type="email" name="email" multiple>
+                </label>
+                <label>파일찾기<input type="file" name="file" multiple> </label>
+            </p>
+            <p><button>전송</button></p>
+        </fieldset>
+    </form>
+
+    <form action="test.jsp" method="get">
+        <fieldset>
+            <legend> disabled, readonly 속성 </legend>
+            <p>
+                <label>비활성화
+                    <input type="text" name="t1" value="disabled"disabled>
+                </label>
+            </p>
+            <p>
+                <label>읽기전용
+                    <input type="tel" name="t2" value="readonly" readonly>
+                </label>
+            </p>
+            <p><button>전송</button></p>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
